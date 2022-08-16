@@ -41,6 +41,6 @@ document.getElementById('Withdraw-btn').addEventListener("click", function () {
         previousTotalString.innerText = previousTotal - newWithdrawAmount;
     }
 
-    depositeField.value = " ";
+    withdrawField.value = " ";
 })
 // Withdraw end
