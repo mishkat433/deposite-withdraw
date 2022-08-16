@@ -1,5 +1,5 @@
 document.getElementById("login").addEventListener("click", function (e) {
-    e.preventDefault()
+    e.preventDefault();
     // find email
     const emailField = document.getElementById("emailField");
     const email = emailField.value;
@@ -11,6 +11,6 @@ document.getElementById("login").addEventListener("click", function (e) {
         location.href = "https://mishkat433.github.io/deposite-withdraw/calculate.html"
     }
     else {
-        alert("email or password mismatch")
+        alert("email or password mismatch");
     }
 })

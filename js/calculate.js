@@ -17,7 +17,7 @@ document.getElementById('deposite-btn').addEventListener("click", function () {
         previousTotalString.innerText = previousTotal + newDepositeAmount;
     }
 
-    depositeField.value = " ";
+    depositeField.value = "";
 
 })
 
@@ -33,14 +33,21 @@ document.getElementById('Withdraw-btn').addEventListener("click", function () {
         let previousAmountString = document.getElementById("previous-withdraw");
         const previousAmount = parseFloat(previousAmountString.innerText);
 
-        previousAmountString.innerText = previousAmount + newWithdrawAmount;
-
         let previousTotalString = document.getElementById("pre-total");
         const previousTotal = parseFloat(previousTotalString.innerText);
 
-        previousTotalString.innerText = previousTotal - newWithdrawAmount;
+        if (previousTotal < newWithdrawAmount) {
+            alert("Not enough balance")
+        }
+        else {
+            previousAmountString.innerText = previousAmount + newWithdrawAmount;
+
+            previousTotalString.innerText = previousTotal - newWithdrawAmount;
+        }
+
+
     }
 
-    withdrawField.value = " ";
+    withdrawField.value = "";
 })
 // Withdraw end
