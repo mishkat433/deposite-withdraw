@@ -8,7 +8,7 @@ document.getElementById("login").addEventListener("click", function (e) {
     const password = passwordField.value;
 
     if (email === "mishkat@me.com" && password === "mishkat@me.com") {
-        location.href = "https://mishkat433.github.io/calculate.html"
+        location.href = "https://mishkat433.github.io/deposite-withdraw/calculate.html"
     }
     else {
         alert("email or password mismatch")
