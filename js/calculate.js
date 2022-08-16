@@ -3,7 +3,7 @@ document.getElementById('deposite-btn').addEventListener("click", function () {
     const newDepositeAmount = parseFloat(depositeField.value);
 
     if (isNaN(newDepositeAmount)) {
-        alert("Please probide a Number")
+        alert("Please probide a Number");
     }
     else {
         let previousAmountString = document.getElementById("previous-deposite");
@@ -15,34 +15,32 @@ document.getElementById('deposite-btn').addEventListener("click", function () {
         const previousTotal = parseFloat(previousTotalString.innerText);
 
         previousTotalString.innerText = previousTotal + newDepositeAmount;
-
-        depositeField.value = " "
     }
 
-    depositeField.value = " "
+    depositeField.value = " ";
 
 })
 
+// Withdraw start
 document.getElementById('Withdraw-btn').addEventListener("click", function () {
-    const depositeField = document.getElementById("withdraw-amount");
-    const newDepositeAmount = parseFloat(depositeField.value);
+    const withdrawField = document.getElementById("withdraw-amount");
+    const newWithdrawAmount = parseFloat(withdrawField.value);
 
-    if (isNaN(newDepositeAmount)) {
-        alert("Please probide a Number")
+    if (isNaN(newWithdrawAmount)) {
+        alert("Please probide a Number");
     }
     else {
         let previousAmountString = document.getElementById("previous-withdraw");
         const previousAmount = parseFloat(previousAmountString.innerText);
 
-        previousAmountString.innerText = previousAmount + newDepositeAmount;
+        previousAmountString.innerText = previousAmount + newWithdrawAmount;
 
         let previousTotalString = document.getElementById("pre-total");
         const previousTotal = parseFloat(previousTotalString.innerText);
 
-        previousTotalString.innerText = previousTotal - newDepositeAmount;
-
-        depositeField.value = " "
+        previousTotalString.innerText = previousTotal - newWithdrawAmount;
     }
 
-    depositeField.value = " "
+    depositeField.value = " ";
 })
+// Withdraw end

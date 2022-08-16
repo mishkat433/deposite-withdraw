@@ -1,4 +1,4 @@
-document.getElementById("submit").addEventListener("click", function (e) {
+document.getElementById("login").addEventListener("click", function (e) {
     e.preventDefault()
     // find email
     const emailField = document.getElementById("emailField");
